@@ -29,31 +29,17 @@ export default class ImageGradient extends Component {
             opacityStart = 0.2,
             opacityEnd = 0.9,
         } = this.props
-        if (localImage) {
-            return (
-                <ImageBackground style={mainStyle} source={ require(imageUrl) }>
-                    <LinearGradient 
-                        style={gradientStyle} 
-                        start={startPosition} 
-                        end={endPosition}
-                        colors={[`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`]} >
-                            {this.props.children}
-                    </LinearGradient>
-                </ImageBackground>
-            )
-        } else {
-            return (
-                <ImageBackground style={mainStyle} source={{ uri: imageUrl }}>
-                    <LinearGradient 
-                        style={gradientStyle} 
-                        start={startPosition} 
-                        end={endPosition}
-                        colors={[`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`]} >
-                            {this.props.children}
-                    </LinearGradient>
-                </ImageBackground>
-            )
-        }
+        return (
+            <ImageBackground style={mainStyle} source={{ uri: imageUrl }}>
+                <LinearGradient 
+                    style={gradientStyle} 
+                    start={startPosition} 
+                    end={endPosition}
+                    colors={[`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`]} >
+                        {this.props.children}
+                </LinearGradient>
+            </ImageBackground>
+        )
     }
 }
 

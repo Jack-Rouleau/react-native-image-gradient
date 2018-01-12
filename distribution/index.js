@@ -58,19 +58,11 @@ var ImageGradient = function (_Component) {
                 _props$opacityEnd = _props.opacityEnd,
                 opacityEnd = _props$opacityEnd === undefined ? 0.9 : _props$opacityEnd;
 
-            if (localImage) {
-                return _react2.default.createElement(_reactNative.ImageBackground, { style: mainStyle, source: require(imageUrl) }, _react2.default.createElement(_reactNativeLinearGradient2.default, {
-                    style: gradientStyle,
-                    start: startPosition,
-                    end: endPosition,
-                    colors: ['rgba(' + rgbcsvEnd + ',' + opacityEnd + ')', 'rgba(' + rgbcsvStart + ',' + opacityStart + ')'] }, this.props.children));
-            } else {
-                return _react2.default.createElement(_reactNative.ImageBackground, { style: mainStyle, source: { uri: imageUrl } }, _react2.default.createElement(_reactNativeLinearGradient2.default, {
-                    style: gradientStyle,
-                    start: startPosition,
-                    end: endPosition,
-                    colors: ['rgba(' + rgbcsvEnd + ',' + opacityEnd + ')', 'rgba(' + rgbcsvStart + ',' + opacityStart + ')'] }, this.props.children));
-            }
+            return _react2.default.createElement(_reactNative.ImageBackground, { style: mainStyle, source: { uri: imageUrl } }, _react2.default.createElement(_reactNativeLinearGradient2.default, {
+                style: gradientStyle,
+                start: startPosition,
+                end: endPosition,
+                colors: ['rgba(' + rgbcsvEnd + ',' + opacityEnd + ')', 'rgba(' + rgbcsvStart + ',' + opacityStart + ')'] }, this.props.children));
         }
     }]);
 

@@ -24,35 +24,19 @@ export default class ImageGradient extends Component {
             opacityStart = 0.2,
             opacityEnd = 0.9
         } = this.props;
-        if (localImage) {
-            return React.createElement(
-                ImageBackground,
-                { style: mainStyle, source: require(imageUrl) },
-                React.createElement(
-                    LinearGradient,
-                    {
-                        style: gradientStyle,
-                        start: startPosition,
-                        end: endPosition,
-                        colors: [`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`] },
-                    this.props.children
-                )
-            );
-        } else {
-            return React.createElement(
-                ImageBackground,
-                { style: mainStyle, source: { uri: imageUrl } },
-                React.createElement(
-                    LinearGradient,
-                    {
-                        style: gradientStyle,
-                        start: startPosition,
-                        end: endPosition,
-                        colors: [`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`] },
-                    this.props.children
-                )
-            );
-        }
+        return React.createElement(
+            ImageBackground,
+            { style: mainStyle, source: { uri: imageUrl } },
+            React.createElement(
+                LinearGradient,
+                {
+                    style: gradientStyle,
+                    start: startPosition,
+                    end: endPosition,
+                    colors: [`rgba(${rgbcsvEnd},${opacityEnd})`, `rgba(${rgbcsvStart},${opacityStart})`] },
+                this.props.children
+            )
+        );
     }
 }
 
