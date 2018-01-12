@@ -43,8 +43,6 @@ var ImageGradient = function (_Component) {
                 gradientStyle = _props$gradientStyle === undefined ? styles.gradientStyle : _props$gradientStyle,
                 _props$imageUrl = _props.imageUrl,
                 imageUrl = _props$imageUrl === undefined ? 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png' : _props$imageUrl,
-                _props$localImage = _props.localImage,
-                localImage = _props$localImage === undefined ? false : _props$localImage,
                 _props$startPosition = _props.startPosition,
                 startPosition = _props$startPosition === undefined ? { x: 0.0, y: 0.50 } : _props$startPosition,
                 _props$endPosition = _props.endPosition,

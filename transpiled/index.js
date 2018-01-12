@@ -16,7 +16,6 @@ export default class ImageGradient extends Component {
             mainStyle = styles.main,
             gradientStyle = styles.gradientStyle,
             imageUrl = 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png',
-            localImage = false,
             startPosition = { x: 0.0, y: 0.50 },
             endPosition = { x: 0.0, y: 1 },
             rgbcsvStart = '255,255,255',
