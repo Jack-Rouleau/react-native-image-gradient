@@ -41,6 +41,8 @@ var ImageGradient = function (_Component) {
                 mainStyle = _props$mainStyle === undefined ? styles.main : _props$mainStyle,
                 _props$gradientStyle = _props.gradientStyle,
                 gradientStyle = _props$gradientStyle === undefined ? styles.gradientStyle : _props$gradientStyle,
+                _props$imageStyle = _props.imageStyle,
+                imageStyle = _props$imageStyle === undefined ? styles.imageStyle : _props$imageStyle,
                 _props$imageUrl = _props.imageUrl,
                 imageUrl = _props$imageUrl === undefined ? 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png' : _props$imageUrl,
                 _props$startPosition = _props.startPosition,
@@ -56,7 +58,7 @@ var ImageGradient = function (_Component) {
                 _props$opacityEnd = _props.opacityEnd,
                 opacityEnd = _props$opacityEnd === undefined ? 0.9 : _props$opacityEnd;
 
-            return _react2.default.createElement(_reactNative.ImageBackground, { style: mainStyle, source: { uri: imageUrl } }, _react2.default.createElement(_reactNativeLinearGradient2.default, {
+            return _react2.default.createElement(_reactNative.ImageBackground, { style: mainStyle, imageStyle: imageStyle, source: { uri: imageUrl } }, _react2.default.createElement(_reactNativeLinearGradient2.default, {
                 style: gradientStyle,
                 start: startPosition,
                 end: endPosition,
@@ -82,6 +84,7 @@ var styles = _reactNative.StyleSheet.create({
         flex: 1,
         height: '100%',
         width: '100%'
-
-    }
+    },
+    imageStyle: {
+    },
 });

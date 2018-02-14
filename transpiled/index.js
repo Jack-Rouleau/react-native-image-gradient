@@ -15,6 +15,7 @@ export default class ImageGradient extends Component {
         const {
             mainStyle = styles.main,
             gradientStyle = styles.gradientStyle,
+            imageStyle = styles.imageStyle,
             imageUrl = 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png',
             startPosition = { x: 0.0, y: 0.50 },
             endPosition = { x: 0.0, y: 1 },
@@ -25,7 +26,7 @@ export default class ImageGradient extends Component {
         } = this.props;
         return React.createElement(
             ImageBackground,
-            { style: mainStyle, source: { uri: imageUrl } },
+            { style: mainStyle, imageStyle: imageStyle, source: { uri: imageUrl } },
             React.createElement(
                 LinearGradient,
                 {
@@ -51,6 +52,7 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         width: '100%'
-
-    }
+    },
+    imageStyle: {
+    },
 });

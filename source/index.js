@@ -13,12 +13,12 @@ export default class ImageGradient extends Component {
 
     constructor() {
         super();
-
     }
 
     render() {
         const { 
-            mainStyle = styles.main, 
+            mainStyle = styles.main,
+            imageStyle = styles.imageStyle,
             gradientStyle = styles.gradientStyle ,
             imageUrl = 'http://www.acmetools.com/wcsstore/AuroraStorefrontAssetStore/images/generic-error-icon-lrg.png' ,
             startPosition = { x: 0.0, y: 0.50 },
@@ -29,7 +29,7 @@ export default class ImageGradient extends Component {
             opacityEnd = 0.9,
         } = this.props
         return (
-            <ImageBackground style={mainStyle} source={{ uri: imageUrl }}>
+            <ImageBackground style={mainStyle} imageStyle={imageStyle} source={{ uri: imageUrl }}>
                 <LinearGradient 
                     style={gradientStyle} 
                     start={startPosition} 
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         width: '100%',
-
+    },
+    imageStyle: {
     },
 });
